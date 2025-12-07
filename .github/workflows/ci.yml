@@ -1,0 +1,24 @@
+name: Simple CI Pipeline
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: List project files
+        run: ls -la
+
+      - name: Build step
+        run: echo "Building static website..."
+
+      - name: Test step
+        run: echo "Running tests... (none for static site)"
