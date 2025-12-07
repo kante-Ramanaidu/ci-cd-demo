@@ -1,8 +1,9 @@
-name: Deploy Static Website
+name: Deploy Static Site to GitHub Pages
 
 on:
   push:
-    branches: [ main ]   # Deploy on every push to main
+    branches:
+      - main  # Deploy on every push to main branch
 
 jobs:
   deploy:
